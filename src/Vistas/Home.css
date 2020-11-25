@@ -358,3 +358,7 @@ p {
 .section__content {
     margin-top: 30px;
 }
+
+.menu {
+    margin-top: -30px;
+}
