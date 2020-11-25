@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import PrincipalLogo from "../Components/Logo";
+import logo from "../img/logo.png";
 import add from '../img/Home/add.png';
 import avatar from '../img/Home/avatar-01.png';
 import card from '../img/Home/card.png';
@@ -8,6 +9,7 @@ import home from '../img/Home/home.png';
 import mdi_search from '../img/Home/mdi_search.png';
 import search from '../img/Home/search.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import './Home.css'
 
@@ -21,10 +23,11 @@ function Home () {
 <section className="animsition">
     <div className="page-wrapper">       
         <div className="page-container">   
-<NavBar></NavBar>
+               <NavBar></NavBar>
             <header className="header-desktop">
-                <div className="logo">           
-                <PrincipalLogo />            
+                <div className="logo"> 
+                <Link to="/"> <img src={logo} /></Link>             
+                    
             </div>
                 <div className="section__content section__content--p30">
                     <div className="container-fluid">
@@ -68,21 +71,18 @@ function Home () {
                             <div className="col-lg-3">
                                 <div className="overview-item ">
                                     <div className="iconAdd">
-                                        <img src={add} />
+                                    <Link to="/casos"> <img src={add} /> </Link>
                                     </div>
                                 </div>
-
                             </div>
 
                             <div className="col-lg-3">
-                                <div className="overview-item home">
+                                <div className="overview-item search" >
                                     <div className="overview-box">
-                                        <div className="iconHome">
-                                            <img src={home} />
+                                        <div className="iconSearch">
+                                            <img src={search} />
                                         </div>
-
                                     </div>
-
                                 </div>
                             </div>
 
@@ -97,17 +97,15 @@ function Home () {
                                 </div>
                             </div>
 
-
                             <div className="col-lg-3">
-                                <div className="overview-item search" >
+                                <div className="overview-item home">
                                     <div className="overview-box">
-                                        <div className="iconSearch">
-                                            <img src={search} />
+                                        <div className="iconHome">
+                                            <img src={home} />
                                         </div>
 
-
-
                                     </div>
+
                                 </div>
                             </div>
                         </class>

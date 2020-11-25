@@ -356,9 +356,25 @@ p {
 }
 
 .section__content {
-    margin-top: 30px;
+    margin-top: -20px;
 }
 
 .menu {
     margin-top: -30px;
+}
+
+.iconAdd{
+    margin-left: 80px;
+}
+
+.iconHome {
+    margin-left: 80px;
+}
+
+.iconCard {
+    margin-left: 80px;
+}
+
+.iconSearch {
+    margin-left: 80px;
 }
