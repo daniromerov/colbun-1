@@ -13,6 +13,7 @@ import Home from './Vistas/Home';
 
 const Router = () => {
     return (
+      
 <Switch>
     <Route exact path='/' component={Login}/>
     <Route exact path='/Home' component={Home}/>

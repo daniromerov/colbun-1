@@ -147,7 +147,7 @@ p {
 .main-content {
     padding-top: 116px;
     min-height: 100vh;
-    margin-top: 200px;
+    margin-top: 30px;
 }
 
 @media (max-width: 991px) {
@@ -352,4 +352,8 @@ p {
 
 .au-input {
     margin-top: 10px;
+}
+
+.section__content {
+    margin-top: -20px;
 }
