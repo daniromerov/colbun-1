@@ -11,7 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './Home.css'
 
-//Components import NavBar from '../Components/Menu/Menu'
+//Components 
+import NavBar from '../Components/Menu/Menu'
 
 function Home () { 
 
@@ -19,7 +20,8 @@ function Home () {
            
 <section className="animsition">
     <div className="page-wrapper">       
-        <div className="page-container">           
+        <div className="page-container">   
+<NavBar></NavBar>
             <header className="header-desktop">
                 <div className="logo">           
                 <PrincipalLogo />            
