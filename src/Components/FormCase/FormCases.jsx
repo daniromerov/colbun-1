@@ -9,7 +9,7 @@ import plusIcon from "@iconify-icons/bi/plus";
 // import Button from "react-bootstrap/Button";
 
 const FormCases = () => {
-  const [selectOption, setSelect] = useState("")
+  const  [selectOption, setSelect] = useState("")
   const  [selectOption1, setSelect1] = useState("")
   const  [selectOption2, setSelect2] = useState("")
   const  [selectOption3, setSelect3] = useState("")
