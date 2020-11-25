@@ -1,5 +1,6 @@
 import React from 'react';
-import Logo from '../img/logo.png';
+
+import PrincipalLogo from "../Components/Logo";
 import add from '../img/Home/add.png';
 import avatar from '../img/Home/avatar-01.png';
 import card from '../img/Home/card.png';
@@ -10,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './Home.css'
 
+//Components import NavBar from '../Components/Menu/Menu'
 
 function Home () { 
 
@@ -19,8 +21,8 @@ function Home () {
     <div className="page-wrapper">       
         <div className="page-container">           
             <header className="header-desktop">
-                <div className="logo">             
-                    <img src={Logo} />              
+                <div className="logo">           
+                <PrincipalLogo />            
             </div>
                 <div className="section__content section__content--p30">
                     <div className="container-fluid">

@@ -1,31 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import FormCases from "./Components/FormCase/FormCases";
 import Opinion from "./Components/Opinion/Opinion"; 
 
+/*Vistas*/
+import Login from './Vistas/Login';
+import Home from './Vistas/Home';
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route path="/" exact>
-          <FormCases />
+          <Login />
         </Route>
 
-        <Route path="/opiniones">
-          <Opinion />
-        </Route>
-
-        {/* <Route path="/home">
-          <Home /><Menu />
+        <Route path="/home">
+          <Home/>
         </Route>
 
         <Route path="/casos">
           <FormCases />
         </Route>
 
+        <Route path="/opiniones">
+          <Opinion />
+        </Route>
+{/*
         <Route path="/opiniones">
           <Opinion />
         </Route>
