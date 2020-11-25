@@ -6,7 +6,7 @@ import SearcherBar from "../FormCase/SearcherBar";
 // npm install --save-dev @iconify/react @iconify-icons/bi
 import { Icon } from "@iconify/react";
 import plusIcon from "@iconify-icons/bi/plus";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 
 const FormCases = () => {
   const [selectOption, setSelect] = useState("")
@@ -42,8 +42,6 @@ const FormCases = () => {
     } catch (error) {
         console.log(error);
     }
-  }
-
 
   return (
     <Fragment>
@@ -151,13 +149,13 @@ const FormCases = () => {
             </select>
           </div>
 
-          <Button as="input" size="lg" type="submit" variant="success" value="Crear" onClick = {sendToFirebase} />
+          <button as="input" size="lg" type="submit" variant="success" value="Crear" onClick = {sendToFirebase} />
 
         </form>
       </div>
     </Fragment>
   );
-};
- 
+}
+}
 
 export default FormCases;
