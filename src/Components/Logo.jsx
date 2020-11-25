@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Logo.css'; 
-import logocolbun from '../img/logocolbun.png';
+import logocolbun from '../Img/logocolbun.png';
 
 
 const PrincipalLogo = () => {

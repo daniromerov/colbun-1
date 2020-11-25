@@ -1,12 +1,12 @@
 import React from 'react';
 
 import PrincipalLogo from "../Components/Logo";
-import add from '../img/Home/add.png';
-import avatar from '../img/Home/avatar-01.png';
-import card from '../img/Home/card.png';
-import home from '../img/Home/home.png';
-import mdi_search from '../img/Home/mdi_search.png';
-import search from '../img/Home/search.png';
+import add from '../Img/Home/add.png';
+import avatar from '../Img/Home/avatar-01.png';
+import card from '../Img/Home/card.png';
+import home from '../Img/Home/home.png';
+import mdi_search from '../Img/Home/mdi_search.png';
+import search from '../Img/Home/search.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './Home.css'
