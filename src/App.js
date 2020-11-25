@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import FormCases from "./Components/FormCase/FormCases";
@@ -19,7 +19,7 @@ function App() {
         </Route>
 
         {/* <Route path="/home">
-          <Home />
+          <Home /><Menu />
         </Route>
 
         <Route path="/casos">
