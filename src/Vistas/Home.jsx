@@ -68,7 +68,7 @@ function Home () {
                                 <div className="au-card recent-report">
                                     <div className="au-card-inner">                                    
                                         <h3 className="title-5">Permisos ambientales para proyecto de desaladora</h3>
-                                       <div className="Icons"> <img src={add} /> <img src={edit} /></div>
+                                       <div className="Icons"> <img src={edit} />  <img src={add} /> </div>
                                     </div>
                                 </div>
                             </div>
