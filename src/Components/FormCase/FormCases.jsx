@@ -8,6 +8,7 @@ import SearcherBar from "../FormCase/SearcherBar";
 // npm install --save-dev @iconify/react @iconify-icons/bi
 import { Icon } from "@iconify/react";
 import plusIcon from "@iconify-icons/bi/plus";
+import TableCase from "../Opinion/TableCase";
 // import Button from "react-bootstrap/Button";
 
 const FormCases = () => {
@@ -60,6 +61,7 @@ const FormCases = () => {
     <Fragment>
       <PrincipalLogo />
       <SearcherBar />
+      <TableCase />
 
       <div>
         <p class="text">
