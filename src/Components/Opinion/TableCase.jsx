@@ -16,22 +16,39 @@ import React from "react";
 function TableCase() {
   let [searchTerm, setSearchTerm] = React.useState("");
   let [searchResults, setSearchResults] = React.useState([]);
+  const [name, setName] = React.useState(""); 
   const handleChange = e => {
+
     setSearchTerm(e.target.value);
+    const nameResult = searchResults.map(item => (
+    
+      item.includes(e.target.value)   
+     
+     ))
+
+     const nameFilter = nameResult.filter(itemName => (
+       itemName === e.target.value
+     )
+  )
+    // setName(nameResult)
+   console.log(nameFilter)
   };
+
   React.useEffect(() => {
     fetch('dataCase.json')
     .then(response => response.json())
-    .then(data => data
-
-
-    const results = data.filter(person =>
-        )    person.toLowerCase().includes(searchTerm)
-    
+    .then(data => {
+       const results = data.map(person =>
+      person.name.toLowerCase()
+   // console.log(person.name)
     );
     setSearchResults(results);
+    //console.log(results)
+      }); 
+   
   }, [searchTerm]);
 
+ 
   
   return (
     <div className="App">
@@ -42,9 +59,7 @@ function TableCase() {
         onChange={handleChange}
       />
       <ul>
-        {searchResults.map(item => (
-         item
-        ))}
+       {name}
       </ul>
     </div>
   );
