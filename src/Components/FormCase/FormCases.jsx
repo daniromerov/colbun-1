@@ -1,17 +1,67 @@
 import React, { Fragment } from "react";
+import { useForm } from "react-hook-form";
+//import { firebase } from '../../firebase';
+// import { Link } from 'react-router-dom';
 import PrincipalLogo from "../Logo";
 import "./FormCases.css";
 import SearcherBar from "../FormCase/SearcherBar";
 // npm install --save-dev @iconify/react @iconify-icons/bi
 import { Icon } from "@iconify/react";
 import plusIcon from "@iconify-icons/bi/plus";
-import Button from "react-bootstrap/Button";
+import TableCase from "../Opinion/TableCase";
+// import Button from "react-bootstrap/Button";
 
 const FormCases = () => {
+
+
+  // const sendToFirebase = async (event) => {
+
+  //   event.preventDefault();
+  //   console.log('enviando datos...')
+
+  //   if (selectOption1.length === 0) {
+  //     return
+  // }
+
+  //   try {
+
+  //       const db = firebase.firestore();
+  
+  //       let peticion = selectOption1.map(options => {
+  //           return (
+  //               options.reduce((result, item) => {
+  //                   return `${result}${item}`
+  //               })
+  //           )
+          
+  //       })
+
+  //    console.log(peticion)
+  //       const options = {
+  //           Fecha: Date.now(),
+  //           AreaC: peticion
+    
+            
+  //       };
+  //       console.log(options);
+  //       await db.collection('AreaC').add(options);
+
+  //   } catch (error) {
+  //       console.log(error);
+  //   }
+  // }
+
+    const { register, handleSubmit } = useForm();
+    const onSubmit = (data) => {
+      console.log(data)
+      
+      }
+  
   return (
     <Fragment>
       <PrincipalLogo />
       <SearcherBar />
+      <TableCase />
 
       <div>
         <p class="text">
@@ -20,9 +70,9 @@ const FormCases = () => {
         </p>
       </div>
       <div class="form-back">
-        <form class="form">
+        <form class="form" onSubmit={handleSubmit(onSubmit)}>
           <div class="container m-2">
-            <select class="custom-select">
+            <select name="date" class="custom-select" ref={register} >
               <option selected>Fecha</option>
               <option value="1">One</option>
               <option value="2">Two</option>
@@ -30,76 +80,85 @@ const FormCases = () => {
             </select>
           </div>
           <div class="container m-2">
-            <input class="form-control" type="text" placeholder="Nombre" />
+            <input name="name" class="form-control" type="text" placeholder="Nombre" ref={register} />
           </div>
           <div class="container m-2">
-            <select class="custom-select">
+            <select name="tema" class="custom-select" ref={register} >
               <option selected>Tema</option>
-              <option value="1">Corporativos</option>
-              <option value="2">Litigios</option>
-              <option value="3">Contratos</option>
-              <option value="4">Opiniones Legales y Asesoría</option>
-              <option value="5">Proyectos</option>
-              <option value="6">Regulaciones</option>
-              <option value="7">Contingencias</option>
+              <option value="Corporativos">Corporativos</option>
+              <option value="Litigios">Litigios</option>
+              <option value="Contratos">Contratos</option>
+              <option value="Opiniones Legales y Asesoria">Opiniones Legales y Asesoría</option>
+              <option value="Proyectos">Proyectos</option>
+              <option value="Regulaciones">Regulaciones</option>
+              <option value="Contingencias">Contingencias</option>
             </select>
+           
           </div>
           <div class="container m-2">
-            <select class="custom-select">
+            <select name="areaC" class="custom-select" ref={register} >
               <option selected>Area cliente</option>
-              <option value="1">
+              <option value="Gerencias de Energías Renovables y Proyectos">
                 Gerencias de Energías Renovables y Proyectos
               </option>
-              <option value="2">Gerencia de Operaciones</option>
-              <option value="3">Gerencia Legal</option>
-              <option value="4">Gerencia de Contabilidad</option>
-              <option value="5">Gerencia de Negocias</option>
-              <option value="6">Gerencia de Proyectos</option>
-              <option value="7">Gerencia de Finanzas</option>
-              <option value="8">Gerencia de Comunicaciones</option>
+              <option value="Gerencia de Operaciones">Gerencia de Operaciones</option>
+              <option value="Gerencia Legal">Gerencia Legal</option>
+              <option value="Gerencia de Contabilidad">Gerencia de Contabilidad</option>
+              <option value="Gerencia de negocios">Gerencia de Negocias</option>
+              <option value="Gerencia de Proyectos">Gerencia de Proyectos</option>
+              <option value="Gerencia de Finanzas">Gerencia de Finanzas</option>
+              <option value="Gerencia de Comunicaciones">Gerencia de Comunicaciones</option>
             </select>
+ 
           </div>
           <div class="container m-2">
-            <select class="custom-select">
+            <select name="entregable" class="custom-select" ref={register} >
               <option selected>Entregable</option>
-              <option value="1">Opinión legal</option>
-              <option value="2">Informe</option>
-              <option value="3">Obtención de permiso</option>
-              <option value="4">Sentencia de cobro</option>
-              <option value="5">Defensa legal</option>
+              <option value="Opinion Legal">Opinión legal</option>
+              <option value="Informe">Informe</option>
+              <option value="Obtencion de permiso">Obtención de permiso</option>
+              <option value="Sentencia de cobro">Sentencia de cobro</option>
+              <option value="Defensa legal">Defensa legal</option>
             </select>
+          
           </div>
           <div class="container m-2">
-            <select class="custom-select">
+            <select name="opinions" class="custom-select" ref={register} >
               <option selected>Opiniones</option>
-              <option value="1">Legal Interno</option>
-              <option value="2">Legal Externo</option>
-              <option value="3">Técnica</option>
-              <option value="4">Contable</option>
+              <option value="Legal Interno">Legal Interno</option>
+              <option value="Legal externo">Legal Externo</option>
+              <option value="Legal Tecnica">Técnica</option>
+              <option value="Contable">Contable</option>
             </select>
+          
           </div>
           <div class="container m-2">
-            <select class="custom-select">
+            <select name="considerations" class="custom-select" ref={register} >
               <option selected>Consideraciones</option>
-              <option value="1">Ambiental</option>
-              <option value="2">Política</option>
-              <option value="3">Tributaria</option>
-              <option value="4">Económica</option>
-              <option value="5">Comunitaria</option>
+              <option value="Ambiental">Ambiental</option>
+              <option value="Politica">Política</option>
+              <option value="Tributaria">Tributaria</option>
+              <option value="Economica">Económica</option>
+              <option value="Comunitaria">Comunitaria</option>
             </select>
+        
           </div>
           <div class="container m-2">
-            <select class="custom-select">
+            <select name="relatied" class="custom-select" ref={register} >
               <option selected>Temas relacionados</option>
             </select>
           </div>
-
-          <Button as="input" size="lg" type="submit" variant="success" value="Crear" />
-
+          {/* <Link to="/opiniones">  */}
+          {/* <Button as="input" size="lg" type="submit" variant="success" value="Crear Caso"/> */}
+          {/* </Link> */}
+              {/* <Link to="/opiniones">  */}
+                 <input class="btn" type="submit" value="Crear caso" />
+                 {/* </Link> */}
         </form>
       </div>
     </Fragment>
   );
-};
+}
+
 
 export default FormCases;
