@@ -1,12 +1,13 @@
 import React, { Fragment, useState } from "react";
-import { firebase } from '../../firebase'; 
+import { firebase } from '../../firebase';
+import { Link } from 'react-router-dom';
 import PrincipalLogo from "../Logo";
 import "./FormCases.css";
 import SearcherBar from "../FormCase/SearcherBar";
 // npm install --save-dev @iconify/react @iconify-icons/bi
 import { Icon } from "@iconify/react";
 import plusIcon from "@iconify-icons/bi/plus";
-// import Button from "react-bootstrap/Button";
+import Button from "react-bootstrap/Button";
 
 const FormCases = () => {
   const  [selectOption, setSelect] = useState("")
@@ -15,25 +16,31 @@ const FormCases = () => {
   const  [selectOption3, setSelect3] = useState("")
   const  [selectOption4, setSelect4] = useState("")
 
-  const sendToFirebase = async (e) => {
-    e.preventDefault();
+  const sendToFirebase = async (event) => {
+    event.preventDefault();
+    console.log('enviando datos...')
+
+    if (selectOption1.length === 0) {
+      return
+  }
 
     try {
 
         const db = firebase.firestore();
-        console.log(db)
+  
         let peticion = selectOption1.map(options => {
             return (
                 options.reduce((result, item) => {
                     return `${result}${item}`
                 })
             )
+          
         })
-       console.log(peticion)
+     console.log(peticion)
         const options = {
             Fecha: Date.now(),
-            Nombre: peticion,
-            AreaC: selectOption1
+            AreaC: peticion
+    
             
         };
         console.log(options);
@@ -42,7 +49,8 @@ const FormCases = () => {
     } catch (error) {
         console.log(error);
     }
-
+  }
+  
   return (
     <Fragment>
       <PrincipalLogo />
@@ -148,14 +156,16 @@ const FormCases = () => {
               <option selected>Temas relacionados</option>
             </select>
           </div>
-
-          <button as="input" size="lg" type="submit" variant="success" value="Crear" onClick = {sendToFirebase} />
-
+          <Link to="/opiniones"> 
+          <Button as="input" size="lg" type="submit" variant="success" value="Crear" onClick={sendToFirebase}/>
+          </Link>
+                 
+                   
         </form>
       </div>
     </Fragment>
   );
 }
-}
+
 
 export default FormCases;
