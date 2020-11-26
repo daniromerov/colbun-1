@@ -1,55 +1,60 @@
-import React, { Fragment, useState } from "react";
-import { firebase } from '../../firebase';
-import { Link } from 'react-router-dom';
+import React, { Fragment } from "react";
+import { useForm } from "react-hook-form";
+//import { firebase } from '../../firebase';
+// import { Link } from 'react-router-dom';
 import PrincipalLogo from "../Logo";
 import "./FormCases.css";
 import SearcherBar from "../FormCase/SearcherBar";
 // npm install --save-dev @iconify/react @iconify-icons/bi
 import { Icon } from "@iconify/react";
 import plusIcon from "@iconify-icons/bi/plus";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 
 const FormCases = () => {
-  const  [selectOption, setSelect] = useState("")
-  const  [selectOption1, setSelect1] = useState("")
-  const  [selectOption2, setSelect2] = useState("")
-  const  [selectOption3, setSelect3] = useState("")
-  const  [selectOption4, setSelect4] = useState("")
 
-  const sendToFirebase = async (event) => {
-    event.preventDefault();
-    console.log('enviando datos...')
 
-    if (selectOption1.length === 0) {
-      return
-  }
+  // const sendToFirebase = async (event) => {
 
-    try {
+  //   event.preventDefault();
+  //   console.log('enviando datos...')
 
-        const db = firebase.firestore();
+  //   if (selectOption1.length === 0) {
+  //     return
+  // }
+
+  //   try {
+
+  //       const db = firebase.firestore();
   
-        let peticion = selectOption1.map(options => {
-            return (
-                options.reduce((result, item) => {
-                    return `${result}${item}`
-                })
-            )
+  //       let peticion = selectOption1.map(options => {
+  //           return (
+  //               options.reduce((result, item) => {
+  //                   return `${result}${item}`
+  //               })
+  //           )
           
-        })
-     console.log(peticion)
-        const options = {
-            Fecha: Date.now(),
-            AreaC: peticion
+  //       })
+
+  //    console.log(peticion)
+  //       const options = {
+  //           Fecha: Date.now(),
+  //           AreaC: peticion
     
             
-        };
-        console.log(options);
-        await db.collection('AreaC').add(options);
+  //       };
+  //       console.log(options);
+  //       await db.collection('AreaC').add(options);
 
-    } catch (error) {
-        console.log(error);
-    }
-  }
+  //   } catch (error) {
+  //       console.log(error);
+  //   }
+  // }
+
+    const { register, handleSubmit } = useForm();
+    const onSubmit = (data) => {
+      console.log(data)
+      
+      }
   
   return (
     <Fragment>
@@ -63,9 +68,9 @@ const FormCases = () => {
         </p>
       </div>
       <div class="form-back">
-        <form class="form">
+        <form class="form" onSubmit={handleSubmit(onSubmit)}>
           <div class="container m-2">
-            <select class="custom-select">
+            <select name="date" class="custom-select" ref={register} >
               <option selected>Fecha</option>
               <option value="1">One</option>
               <option value="2">Two</option>
@@ -73,13 +78,10 @@ const FormCases = () => {
             </select>
           </div>
           <div class="container m-2">
-            <input class="form-control" type="text" placeholder="Nombre" />
+            <input name="name" class="form-control" type="text" placeholder="Nombre" ref={register} />
           </div>
           <div class="container m-2">
-            <select class="custom-select" onChange={(e)=>{
-              const selectedTema =e.target.value; 
-              setSelect(selectedTema)
-            }}>
+            <select name="tema" class="custom-select" ref={register} >
               <option selected>Tema</option>
               <option value="Corporativos">Corporativos</option>
               <option value="Litigios">Litigios</option>
@@ -89,13 +91,10 @@ const FormCases = () => {
               <option value="Regulaciones">Regulaciones</option>
               <option value="Contingencias">Contingencias</option>
             </select>
-            {selectOption}
+           
           </div>
           <div class="container m-2">
-            <select class="custom-select" onChange={(e)=>{
-              const selectedTema1 =e.target.value; 
-              setSelect1(selectedTema1)
-            }}>
+            <select name="areaC" class="custom-select" ref={register} >
               <option selected>Area cliente</option>
               <option value="Gerencias de Energías Renovables y Proyectos">
                 Gerencias de Energías Renovables y Proyectos
@@ -108,13 +107,10 @@ const FormCases = () => {
               <option value="Gerencia de Finanzas">Gerencia de Finanzas</option>
               <option value="Gerencia de Comunicaciones">Gerencia de Comunicaciones</option>
             </select>
-            {selectOption1}
+ 
           </div>
           <div class="container m-2">
-            <select class="custom-select" onChange={(e)=>{
-              const selectedTema2 =e.target.value; 
-              setSelect2(selectedTema2)
-            }}>
+            <select name="entregable" class="custom-select" ref={register} >
               <option selected>Entregable</option>
               <option value="Opinion Legal">Opinión legal</option>
               <option value="Informe">Informe</option>
@@ -122,26 +118,20 @@ const FormCases = () => {
               <option value="Sentencia de cobro">Sentencia de cobro</option>
               <option value="Defensa legal">Defensa legal</option>
             </select>
-            {selectOption2}
+          
           </div>
           <div class="container m-2">
-            <select class="custom-select" onChange={(e)=>{
-              const selectedTema3 =e.target.value; 
-              setSelect3(selectedTema3)
-            }}>
+            <select name="opinions" class="custom-select" ref={register} >
               <option selected>Opiniones</option>
               <option value="Legal Interno">Legal Interno</option>
               <option value="Legal externo">Legal Externo</option>
               <option value="Legal Tecnica">Técnica</option>
               <option value="Contable">Contable</option>
             </select>
-            {selectOption3}
+          
           </div>
           <div class="container m-2">
-            <select class="custom-select" onChange={(e)=>{
-              const selectedTema4 =e.target.value; 
-              setSelect4(selectedTema4)
-            }}>
+            <select name="considerations" class="custom-select" ref={register} >
               <option selected>Consideraciones</option>
               <option value="Ambiental">Ambiental</option>
               <option value="Politica">Política</option>
@@ -149,18 +139,19 @@ const FormCases = () => {
               <option value="Economica">Económica</option>
               <option value="Comunitaria">Comunitaria</option>
             </select>
-            {selectOption4}
+        
           </div>
           <div class="container m-2">
-            <select class="custom-select">
+            <select name="relatied" class="custom-select" ref={register} >
               <option selected>Temas relacionados</option>
             </select>
           </div>
-          <Link to="/opiniones"> 
-          <Button as="input" size="lg" type="submit" variant="success" value="Crear" onClick={sendToFirebase}/>
-          </Link>
-                 
-                   
+          {/* <Link to="/opiniones">  */}
+          {/* <Button as="input" size="lg" type="submit" variant="success" value="Crear Caso"/> */}
+          {/* </Link> */}
+              {/* <Link to="/opiniones">  */}
+                 <input class="btn" type="submit" value="Crear caso" />
+                 {/* </Link> */}
         </form>
       </div>
     </Fragment>

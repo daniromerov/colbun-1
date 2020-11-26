@@ -44,4 +44,8 @@
     
   }
   
-  
+  .btn {
+    background-color: #3FAA2B;
+    color: white; 
+    width: 42%;
+  }
