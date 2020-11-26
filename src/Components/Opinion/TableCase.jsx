@@ -23,13 +23,13 @@ function TableCase() {
     const nameResult = searchResults.map(item => (
     
       item.includes(e.target.value)   
-     
+   
      ))
-
      const nameFilter = nameResult.filter(itemName => (
-       itemName === e.target.value
-     )
-  )
+      itemName === e.target.value
+    )
+ )
+  
     // setName(nameResult)
    console.log(nameFilter)
   };
