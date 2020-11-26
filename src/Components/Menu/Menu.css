@@ -12,11 +12,11 @@ body {
   }
   /* circulo verde menu */
   .burger-menu .menu-open {
-    border: 2px solid #6BAC5F;
+    border: 2px solid #018ECF;
     padding: 30px 40px;
     border-radius: 100%;
     position: relative;
-    background: #6BAC5F;
+    background: #018ECF;
     box-shadow: 1px 1px 3px;
     cursor: pointer;
     z-index: 1;
@@ -50,7 +50,7 @@ body {
     border: 0;
   }
   .burger-menu .menu-check:checked + .menu-open span {
-    background-color: #6BAC5F;
+    background-color: #018ECF;
   }
   .burger-menu .menu-check:checked + .menu-open span.burger1 {
     transform: translate3d(0px, -10px, 0px) rotate(-45deg);
@@ -65,7 +65,7 @@ body {
   }
  
   .burger-menu .menu-options {
-        background-color: #6BAC5F;
+        background-color: #DCECF8;
         position: absolute;
         width: 0;
         top: 0;
@@ -87,8 +87,8 @@ body {
    .burger-menu .menu-options li a img{
     color: #fff;
     line-height: 4em;
-    width: 65px;
-    /*margin-top: 13%*/;
+    width: 40px;
+    margin-top: 13%;
     transition: 0.5s;
     }
   .burger-menu .menu-options li a:hover {
@@ -110,3 +110,5 @@ body {
     opacity: 1;
     height: 100vh;
   }
+
+ 

@@ -498,3 +498,8 @@ input.input100 {
 .min-h-full {
   min-height: 100%;
 }
+
+.logos {
+  margin-left: 150px;
+  margin-top: -100px;
+}

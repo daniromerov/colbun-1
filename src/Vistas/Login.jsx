@@ -1,6 +1,6 @@
 import React from 'react';
-//import logoCol from '../img/logo-blanco.svg';
-//import logoFel from '../img/logo-blanco.svg';
+import logoCol from '../img/logo-colbun.jpg';
+import logoFen from '../img/logo-fenix.png';
 import './Login.css'
 import { Link } from 'react-router-dom';
 import firebase from 'firebase/app';
@@ -24,7 +24,9 @@ function Login () {
     <div className="limiter">
 		<div className="container-login100">
 			<div className="wrap-login100">
+			
 				<form className="login100-form validate-form">
+				<div className="logos" align="center"><img src={logoCol} width="100"/> <img src={logoFen} width="100"/></div>
 					<span className="login100-form-title p-b-34">
 						Iniciar sesión
 					</span>
@@ -39,6 +41,7 @@ function Login () {
 					</div>
 					
 					<div className="container-login100-form-btn">
+						
 					<button className="login100-form-btn">
 					<Link to="/home">	Iniciar sesión </Link>
 						</button>

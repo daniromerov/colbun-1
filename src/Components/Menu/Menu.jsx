@@ -18,11 +18,10 @@ const NavBar = () => {
                 <span className="burger3"></span>
             </label>
 
-            <ul className="menu-options">
+            <ul className="menu-options" width="50">
+                <li><a href=""><img src={Home} alt={"Home"} /></a></li>
                 <li><a href="/"><img src={Agregar} alt={"Agregar"}/></a></li>
                 <li><a href=""><img src={Buscar} alt={"Buscar"}/></a></li>
-                <li><a href=""><img src={Casos} alt={"Casos"}/></a></li>
-                <li><a href=""><img src={Home} alt={"Home"}/></a></li>
             </ul>
         </nav>
     </div>
