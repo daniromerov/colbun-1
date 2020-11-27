@@ -5,6 +5,7 @@ import FilterResults from "./FilterResults";
 import ResultsCases from "./Results";
 import TextResult from "./TextResult";
 
+
 const TemplateResults = () => {
   return (
     <Fragment>

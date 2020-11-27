@@ -1,13 +1,14 @@
 .container-wallComents {
   background-color: #828282;
   position: relative;
-  margin-top: -8%;
+  margin-top: 20px;
   width: 50%;
   height: 26vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 11%;
+
 }
 
 .input-wall {
