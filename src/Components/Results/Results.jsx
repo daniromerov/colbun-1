@@ -29,15 +29,15 @@ e.preventDefault()
   
   return (
     
-    <div className="App">
-      <input
+    <div className="app1">
+      <input class = "input-search"
         type="text"
         placeholder="Search"
         value={searchTerm}
         onChange={handleChange}
       />
       <div className ="container-table1">
-          <p className ="title-cases">Casos</p>
+        
       <table class="table">
        <thead>
         <tr>
