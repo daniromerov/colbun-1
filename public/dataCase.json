@@ -20,10 +20,34 @@
       "ent": "Gerencia de Ingeniería "
     },
     {
-      "name": " Demanda con Cliente ",
+      "name": "Demanda con Cliente ",
       "id": " ",
       "area": "Gerencia de Negocios",
       "ent": "Gerencia Comercial; Gerencia de Finanzas y Administración"
+    },
+    {
+      "name": "Fiscalización de Autoridad ",
+      "id": " ",
+      "area": "Gerencia de Medio Ambiente",
+      "ent": "Gerencia de Transmisión"
+    },
+    {
+      "name": "Nuevo Reglamento Eléctrico",
+      "id": " ",
+      "area": "Gerencia de Regulación",
+      "ent": "Gerencia de Negocios;Gerencia de Control de Gestión y Riesgos; Gerencia General"
+    },
+    {
+      "name": "Demanda Laboral",
+      "id": " ",
+      "area": "Gerencia de Organización y Personas",
+      "ent": "Gerencia de Generación"
+    },
+    {
+      "name": "Convenio de Colaboración con ONG",
+      "id": " ",
+      "area": "Gerencia de Asuntos Públicos",
+      "ent": "Gerencia de Medio Ambiente; "
     }
   ]
   
