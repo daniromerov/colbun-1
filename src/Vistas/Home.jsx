@@ -24,13 +24,13 @@ function Home() {
   };
 
   const buscarDatos = async (valor) => {
-    console.log("valor: " + valor);
+    console.log("valor: " + valor.toUpperCase());
     const busqueda = await fetch("dataCase.json");
     const busquedaJ = await busqueda.json();
     console.log(busquedaJ);
     if (valor != "") {
       const presentacion = await busquedaJ.map((item) =>
-        valor == item.name ? item : ""
+        item.name.toUpperCase().includes(valor.toUpperCase()) ? item : ""
       );
       const book = presentacion.filter(Boolean);
       console.log(book);
