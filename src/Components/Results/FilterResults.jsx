@@ -1,25 +1,36 @@
 import React from 'react';
+import "./Filterresults.css"; 
 
 function FilterResults() {
 
     return ( 
       <div className="divtable">
-<div className="select">
+<div className ="select">
+  <div>
 <select>
   <option value="temas">Temas</option>
 </select>
+</div>
+<div>
 <select>
   <option value="tipos entregables">Tipos entregables</option>
 </select>
+</div>
+<div>
 <select>
   <option value="areas">Áreas</option>
 </select>
+</div>
+<div>
 <select>
   <option value="tipos de opciones">Tipos de opciones</option>
 </select>
+</div>
+<div>
 <select>
   <option value="nivel autorizacion">Nivel autorización</option>
 </select>
+</div>
 </div>
 </div>
 

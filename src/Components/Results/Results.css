@@ -4,7 +4,7 @@
   margin-top: 35vh;
 }
 
-.container-input-search{
+.container-input-search1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,11 +13,17 @@
   margin-top: 5%;
 }
 
-.input-search {
+.input-search1 {
   width: 30%;
   border-style: solid;
   position: absolute;
-  margin-top: -14%;
-  margin-left: 30%;
+  margin-left: 12vw;
+  margin-top: -21%;
   background-color: gainsboro;
+}
+
+.colTable{
+  display: flex; 
+  justify-content: center;
+  flex-direction: row;
 }

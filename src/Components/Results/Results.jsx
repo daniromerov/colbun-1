@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Results.css"; 
 
 
 function ResultsCases() {
@@ -29,25 +29,27 @@ e.preventDefault()
   
   return (
     
-    <div className="container-input-search">
-      <input class = "input-search"
+    <div className="container-input-search1">
+      <input className = "input-search1"
         type="text"
         placeholder="Buscar"
         value={searchTerm}
         onChange={handleChange}
       />
-      <div className ="container-table1">
-        
+      
+        <div className="colTable">
+          {/* <div class="col-md-4"></div>
+          <div class="col-md-8"></div> */}
       <table class="table">
        <thead>
         <tr>
          
-          <th scope="col">Fecha</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Tema</th>
-           <th scope="col">Area Cliente</th>
-          <th scope="col">Area Relacionada</th>
-          <th scope="col">Responsable</th>
+          <th class="col-md-2">Fecha</th>
+          <th class="col-md-2">Nombre</th>
+          <th class="col-md-2">Tema</th>
+           <th class="col-md-2">Area Cliente</th>
+          <th class="col-md-2">Area Relacionada</th>
+          <th class="col-md-2">Responsable</th>
          
         </tr>
       </thead>
@@ -72,6 +74,7 @@ e.preventDefault()
     </div>
  
     </div>
+   
   ); 
 
 }
