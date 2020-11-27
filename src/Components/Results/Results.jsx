@@ -1,5 +1,6 @@
 import React from "react";
 import "./Results.css"; 
+import { Link } from "react-router-dom";
 
 
 function ResultsCases() {
@@ -40,6 +41,7 @@ e.preventDefault()
         <div className="colTable">
           {/* <div class="col-md-4"></div>
           <div class="col-md-8"></div> */}
+          <Link to="/opiniones">
       <table class="table">
        <thead>
         <tr>
@@ -70,7 +72,7 @@ e.preventDefault()
       </tbody>
        )
        } )}
-    </table>
+    </table></Link>
     </div>
  
     </div>

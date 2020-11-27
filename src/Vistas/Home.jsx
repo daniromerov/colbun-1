@@ -103,7 +103,7 @@ function Home() {
                   <div className="row-casos">
                     <div className="col-lg-12">
                       <h3 className="title-4"> Ultimos casos </h3>
-
+                      <Link to="/detallecasos">
                       {casos.map((item) => (
                         <div className="au-card recent-report">
                           <div className="au-card-inner">
@@ -120,7 +120,7 @@ function Home() {
                             </div>
                           </div>
                         </div>
-                      ))}
+                      ))} </Link>
                     </div>
                   </div>
                 </div>
