@@ -2,20 +2,28 @@
 
 [
     {
-      "name": "Lennart Johansson",
-      "city": "Stockholm"
+      "name": "Proyecto Fotovoltaico",
+      "id": "Proyectos ; Ambiental; Regulación ",
+      "area": "Gerencia de Construcción",
+      "ent": "Gerencia de Ingeniería; Gerencia de Medio Ambiente; Gerencia de Negocios "
     },
     {
-      "name": "Karl Eriksson",
-      "city": "London"
+      "name": "Contrato de Suministro Eléctrico",
+      "id": " ",
+      "area": "Gerencia Comercial",
+      "ent": " "
     },
     {
-      "name": "Pekka Hartikainen",
-      "city": "Helsinki"
+      "name": "Proyecto Línea de Transmisión  ",
+      "id": "Proyectos ; Regulación ",
+      "area": " Gerencia de Proyectos de Transmisión",
+      "ent": "Gerencia de Ingeniería "
     },
     {
-      "name": "Mia Svensson",
-      "city": "Berlin"
+      "name": " Demanda con Cliente ",
+      "id": " ",
+      "area": "Gerencia de Negocios",
+      "ent": "Gerencia Comercial; Gerencia de Finanzas y Administración"
     }
   ]
   
