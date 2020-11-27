@@ -1,3 +1,9 @@
-.divtable{
-    
+.divtable {
+}
+
+.select {
+  display: flex;
+  justify-content: space-around;
+  width: 75vw;
+  margin-left: 13%;
 }
