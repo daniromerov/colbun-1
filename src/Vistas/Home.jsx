@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import logo from "../img/logo.png";
 import edit from "../img/Home/edit.png";
 import add from "../img/Home/add.png";
@@ -10,10 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
 //Components
 import NavBar from "../Components/Menu/Menu";
-;
-
-function Home() { 
-
+function Home() {
   const [casos, setCasos] = React.useState([]);
   React.useEffect(() => {
     console.log("useEffect");
@@ -27,13 +23,29 @@ function Home() {
     setCasos(archivoJ);
   };
 
+  const buscarDatos = async (valor) => {
+    console.log("valor: " + valor);
+    const busqueda = await fetch("dataCase.json");
+    const busquedaJ = await busqueda.json();
+    console.log(busquedaJ);
+    if (valor != "") {
+      const presentacion = await busquedaJ.map((item) =>
+        valor == item.name ? item : ""
+      );
+      const book = presentacion.filter(Boolean);
+      console.log(book);
+      setCasos(book);
+    } else {
+      setCasos(busquedaJ);
+    }
+  };
+
   return (
     <section className="animsition">
       <div className="page-wrapper">
         <div className="page-container">
-          
           <header className="header-desktop">
-          <NavBar></NavBar>
+            <NavBar></NavBar>
             <div className="logo">
               <Link to="/">
                 {" "}
@@ -43,17 +55,25 @@ function Home() {
             <div className="section__content section__content--p30">
               <div className="container-fluid">
                 <div className="header-wrap">
-                  <form className="form-header" action="" method="POST">
+                  <div className="form-header">
                     <input
                       className="au-input au-input--xl"
-                      type="text"
+                      id="inputSearch"
+                      type="search"
                       name="search"
                       placeholder="Buscar.."
                     />
-                    <button className="au-btn--submit" type="submit">
+                    <button
+                      className="au-btn--submit"
+                      onClick={() =>
+                        buscarDatos(
+                          document.getElementById("inputSearch").value
+                        )
+                      }
+                    >
                       <img src={search} />
                     </button>
-                  </form>
+                  </div>
                   <div className="header-button">
                     <div className="account-wrap">
                       <div className="account-item">
