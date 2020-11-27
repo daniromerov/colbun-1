@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Coments from "./Coments";
 import Filter from "./Filter";
-import TableCase from "./TableCase";
+//import TableCase from "./TableCase";
 import WallComents from "./WallComents";
 import SearcherOpinion from "./SearcherOpinion";
 
@@ -26,7 +26,7 @@ const Opinion = () => {
             </div>
           </header>
 
-      <TableCase />
+     
       <WallComents />
       <Coments />
       <Filter />
