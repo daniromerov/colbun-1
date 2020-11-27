@@ -29,10 +29,10 @@ e.preventDefault()
   
   return (
     
-    <div className="app1">
+    <div className="container-input-search">
       <input class = "input-search"
         type="text"
-        placeholder="Search"
+        placeholder="Buscar"
         value={searchTerm}
         onChange={handleChange}
       />
@@ -47,7 +47,7 @@ e.preventDefault()
           <th scope="col">Tema</th>
            <th scope="col">Area Cliente</th>
           <th scope="col">Area Relacionada</th>
-          <th scope="col">Opiniones</th>
+          <th scope="col">Responsable</th>
          
         </tr>
       </thead>

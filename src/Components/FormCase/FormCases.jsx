@@ -13,10 +13,7 @@ import TableCase from "../Opinion/TableCase";
 
 const FormCases = () => {
 
-
-  // const sendToFirebase = async (event) => {
-
-  //   event.preventDefault();
+ 
   //   console.log('enviando datos...')
 
   //   if (selectOption1.length === 0) {
@@ -53,8 +50,7 @@ const FormCases = () => {
 
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
-      console.log(data)
-      
+      console.log(data) 
       }
   
   return (
@@ -73,9 +69,8 @@ const FormCases = () => {
           <div class="container m-2">
             <select name="date" class="custom-select" ref={register} >
               <option selected>Fecha</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="1">27/11/2020</option>
+             
             </select>
           </div>
           <div class="container m-2">
