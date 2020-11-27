@@ -1,15 +1,31 @@
 import React, { Fragment } from "react";
-import PrincipalLogo from "../Logo";
 import Coments from "./Coments";
 import Filter from "./Filter";
 import TableCase from "./TableCase";
 import WallComents from "./WallComents";
 import SearcherOpinion from "./SearcherOpinion";
 
+import NavBar from "../Menu/Menu";
+import logo from "../../img/logo.png";
+
 const Opinion = () => {
   return (
     <Fragment>
-      <PrincipalLogo />
+       <header className="header-desktop">
+            <NavBar></NavBar>
+            <div className="logo">              
+                <img src={logo} />              
+            </div>
+            <div className="section__content section__content--p30">
+              <div className="container-fluid">
+                <div className="header-wrap">
+                 
+              
+                </div>
+              </div>
+            </div>
+          </header>
+
       <TableCase />
       <WallComents />
       <Coments />

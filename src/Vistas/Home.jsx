@@ -80,7 +80,7 @@ function Home() {
                         <div className="image">
                           <img src={avatar} />
                         </div>
-                        <div className="content">john doe</div>
+                      
                       </div>
                     </div>
                   </div>

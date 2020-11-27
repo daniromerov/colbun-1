@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { useForm } from "react-hook-form";
 //import { firebase } from '../../firebase';
 import { Link } from 'react-router-dom';
-import PrincipalLogo from "../Logo";
+//import PrincipalLogo from "../Logo";
 import "./FormCases.css";
 //import SearcherBar from "../FormCase/SearcherBar";
 // npm install --save-dev @iconify/react @iconify-icons/bi
@@ -13,7 +13,7 @@ import TableCase from "../Opinion/TableCase";
 //Components
 import NavBar from "../Menu/Menu";
 import logo from "../../img/logo.png";
-import avatar from "../../img/Home/avatar-01.png";
+//import avatar from "../../img/Home/avatar-01.png";
 
 const FormCases = () => {
 
