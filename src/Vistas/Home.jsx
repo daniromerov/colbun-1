@@ -5,7 +5,7 @@ import edit from "../img/Home/edit.png";
 import add from "../img/Home/add.png";
 import avatar from "../img/Home/avatar-01.png";
 import search from "../img/Home/mdi_search.png";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
 //Components
 import NavBar from "../Components/Menu/Menu";

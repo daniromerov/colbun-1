@@ -1,0 +1,23 @@
+.container-table1 {
+  width: 80%;
+  margin-left: 25vh;
+  margin-top: 35vh;
+}
+
+.container-input-search{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 12vw;
+  margin-top: 5%;
+}
+
+.input-search {
+  width: 30%;
+  border-style: solid;
+  position: absolute;
+  margin-top: -14%;
+  margin-left: 30%;
+  background-color: gainsboro;
+}

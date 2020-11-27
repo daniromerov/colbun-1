@@ -1,5 +1,3 @@
-
-
   .text {
       color: #25282B;
       position: relative;
@@ -43,9 +41,4 @@
       border-radius: 2%;
     
   }
-  
-  .btn {
-    background-color: #3FAA2B;
-    color: white; 
-    width: 42%;
-  }
+

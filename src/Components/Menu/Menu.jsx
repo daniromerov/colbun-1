@@ -18,9 +18,9 @@ const NavBar = () => {
             </label>
 
             <ul className="menu-options">
-                <li><a href=""><img src={Home} alt={"Home"}/></a><p>Inicio</p></li>
+                <li><a href="/home"><img src={Home} alt={"Home"}/></a><p>Inicio</p></li>
                 <li><a href="/casos"><img src={Agregar} alt={"Agregar"}/></a><p>Nuevo caso</p></li>
-                <li><a href=""><img src={Buscar} alt={"Buscar"}/></a><p>Buscar</p></li>
+                <li><a href="/detallecasos"><img src={Buscar} alt={"Buscar"}/></a><p>Buscar</p></li>
             </ul>
         </nav>
     </div>
