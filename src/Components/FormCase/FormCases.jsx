@@ -61,7 +61,6 @@ const FormCases = () => {
     <Fragment>
       <PrincipalLogo />
       <SearcherBar />
-      <TableCase />
 
       <div>
         <p class="text">

@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import FormCases from "./Components/FormCase/FormCases";
 import Opinion from "./Components/Opinion/Opinion"; 
+import TemplateResults from './Components/Results/TemplateResults';
 
 
 function App() {
@@ -18,7 +19,11 @@ function App() {
           <Opinion />
         </Route>
 
-        {/* <Route path="/home">
+        <Route path="/detallecasos">
+          <TemplateResults /> 
+        </Route>
+{/* 
+         <Route path="/home">
           <Home /><Menu />
         </Route>
 
@@ -28,11 +33,9 @@ function App() {
 
         <Route path="/opiniones">
           <Opinion />
-        </Route>
-
-        <Route path="/detallecasos">
-          <PreviewCases />
         </Route> */}
+
+     
       </Switch>
     </Router>
   );

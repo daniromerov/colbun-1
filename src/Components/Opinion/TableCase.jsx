@@ -1,57 +1,43 @@
 import React from "react";
 
 
-
 function TableCase() {
-  let [searchTerm, setSearchTerm] = React.useState("");
-  let people = [
-    { name: "hola", tema: "pello"}, 
-    { name: "aja", tema: "probando"}
-   ];
-
-  const handleChange = e => {
-e.preventDefault()
-    setSearchTerm(e.target.value);
-
- };
- 
- if(searchTerm.length > 0) {
-   people = people.filter((i) => {
-     return i.name.match(searchTerm); 
-   })
- }
-  
-
-
- 
   
   return (
     <div className="App">
-      <input
-        type="text"
-        placeholder="Search"
-        value={searchTerm}
-        onChange={handleChange}
-      />
       
-      {people.map(item => {
-        return (
-          <div>
-          <ul>
-          <li>
-            {item.name} - {item.tema}
-          </li>
-          
+        <div className ="container-table">
+          <p className ="title-cases">Casos</p>
+    <table class="table">
+      <thead>
+        <tr>
+      
+          <th scope="col">Fecha</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Tema</th>
+          <th scope="col">Area Cliente</th>
+          <th scope="col">Area Relacionada</th>
+          <th scope="col">Opiniones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+   
+          <td>09/10/2020</td>
+          <td>Proyecto Fotovoltaico</td>
+          <td>Proyectos; Ambiental; Regulación</td>
+          <td>Gerencia de Construcción</td>
+          <td>Gerencia de Ingeniería; Gerenciad de Medio Ambiente; Gerencia de Negocios</td>
+          <td> </td>
+        </tr>
         
-      </ul>
-      </div>
-      );
-    } )}
+       
+      </tbody>
+    </table>
+    </div>
+ 
+
     </div>
   );
-
 }
-
-
-
 export default TableCase;
